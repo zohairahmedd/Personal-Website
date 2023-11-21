@@ -1,0 +1,358 @@
+*{ /* this will be applied to the entire website */
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.banner{ /* editing class banner */
+    width: 100%;
+    height: 170vh;
+    background: linear-gradient(90deg, rgba(2,0,.6,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.navbar{ /* editing class navbar (navigation bar) */
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: nav-load 850ms;
+}
+.logo{ /* editing class logo (ZA logo in the top left) */
+    width: 120px;
+    cursor: pointer;
+    z-index: 1;
+}
+.navbar ul li{ /* (general) edits the home and project buttons in the top right in class navbar */
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{ /* (specific) edits the home and project buttons in the top right in class navbar */
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after{ /* once the cursor is no longer hovering or was never over some text in the navbar, this is applied */
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{ /* once the cursor is hovering over some text in the navbar, this overwrites the width from .navbar ul li::after */
+    width: 100%;
+}
+.content{ /* (general) edits class content */
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    color: #fff;
+    animation: nav-load 850ms;
+}
+.content h1{ /* (specific) edits class content - headers in specific */
+    font-size: 70px;
+    margin-top: -65px;
+}
+.content p{ /* (specific) edits class content - paragraph in specific */
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+.calculatortext{ /* generalizes calculatortext data */
+    color: #fff;
+    width: 50%;
+    position: absolute;
+    top: 53%;
+    transform: translateY(1200%);
+}
+.calculatortext p{ /* positions text for calculator (x-axis) */
+    transform: translateX(23%);
+}
+.calc{ /* positions image */
+    position: absolute;
+    top: 23%;
+    transform: translateY(-100%);
+    transform: translateX(70%);
+}
+.qrcodetext{ /* generalizes qrcode data */
+    color: #fff;
+    width: 50%;
+    position: absolute;
+    top: 34%;
+    transform: translateY(1200%);
+}
+.qrcodetext p{ /* positions text for qrcode (x-axis) */
+    transform: translateX(77%);
+}
+.qr{ /* positions image */
+    position: absolute;
+    top: 23%;
+    transform: translateY(-100%);
+    transform: translateX(250%);
+    width: 300px;
+}
+.pongtext{ /* generalizes pongtext data */
+    color: #fff;
+    width: 20%;
+    position: absolute;
+    top: 43%;
+    transform: translateY(1200%);
+}
+.pongtext p{ /* positions text for pong (x-axis) */
+    transform: translateX(363.5%);
+}
+.pong{ /* positions image */
+    position: absolute;
+    top: 23%;
+    transform: translateY(-100%);
+    transform: translateX(250%);
+    width: 500px;
+}
+.unrealtext{ /* generalizes unrealtext data */
+    color: #fff;
+    width: 20%;
+    position: absolute;
+    top: 71%;
+    transform: translateY(1200%);
+    text-align: center;
+}
+.unrealtext p{ /* positions text for unreal (x-axis) */
+    transform: translateX(46%);
+}
+.unreal{ /* positions image */
+    position: absolute;
+    top: 85%;
+    transform: translateY(-100%);
+    transform: translateX(25%);
+    width: 500px;
+}
+.clocktext{ /* generalizes clocktext data */
+    color: #fff;
+    width: 20%;
+    position: absolute;
+    top: 55%;
+    transform: translateY(1200%);
+    text-align: center;
+}
+.clocktext p{ /* positions text for clocktext (x-axis) */
+    transform: translateX(195%);
+}
+.clock{ /* positions image */
+    position: absolute;
+    top: 85%;
+    transform: translateY(-100%);
+    transform: translateX(135%);
+    width: 500px;
+}
+.snake{ /* positions image */
+    position: absolute;
+    top: 85%;
+    transform: translateY(-100%);
+    transform: translateX(620%);
+    width: 200px;
+}
+.snakertext{ /* generalizes snakertest data */
+    color: #fff;
+    width: 10%;
+    position: absolute;
+    top: 27%;
+    transform: translateY(1200%);
+    text-align: center;
+}
+.snakertext p{ /* positions text for snakertext (x-axis) */
+    transform: translateX(805%);
+}
+.snaker{ /* positions image */
+    position: absolute;
+    top: 85%;
+    transform: translateY(-100%);
+    transform: translateX(740%);
+    width: 200px;
+}
+.passwordtext{ /* generalizes passwordtext data */
+    color: #fff;
+    width: 15%;
+    position: absolute;
+    top: 85%;
+    transform: translateY(1200%);
+    text-align: center;
+}
+.passwordtext p{ /* positions text for password (x-axis) */
+    transform: translateX(68%);
+}
+.password{ /* positions image */
+    position: absolute;
+    top: 138%;
+    transform: translateY(-100%);
+    transform: translateX(52%);
+    width: 330px;
+}
+.voicetext{ /* generalizes voicetext data */
+    color: #fff;
+    width: 15%;
+    position: absolute;
+    top: 86%;
+    transform: translateY(1200%);
+    text-align: center;
+}
+.voicetext p{ /* positions text for voicetext (x-axis) */
+    transform: translateX(268%);
+}
+.voice{ /* positions image */
+    position: absolute;
+    top: 138.2%;
+    transform: translateY(-100%);
+    transform: translateX(220%);
+    width: 330px;
+}
+.compressedtext{ /* generalizes compressedtext data */
+    color: #fff;
+    width: 15%;
+    position: absolute;
+    top: 94%;
+    transform: translateY(1200%);
+    text-align: center;
+}
+.compressedtext p{ /* positions text for compressedtext (x-axis) */
+    transform: translateX(456.5%);
+}
+.compressed{ /* positions image */
+    position: absolute;
+    top: 138.2%;
+    transform: translateY(-100%);
+    transform: translateX(380%);
+    width: 330px;
+}
+.projectheader { /* generalizes projectheader data */
+    color: #fff;
+    width: 15;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-1200%);
+}
+.projectheader h1{ /* this will be applied to everything inside of class content <h1> in html */
+    font-size: 25px;
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+    margin-top: -275px;
+    transform: translateX(1750%);
+    font-weight: bolder;
+}
+.smallprojectheader { /* generalizes smallprojectheader data */
+    color: #fff;
+    width: 20%;
+    position: absolute;
+    top: 160%;
+    transform: translateY(-600%);
+}
+.smallprojectheader h1{ /* this will be applied to everything inside of class content <h1> in html */
+    font-size: 25px;
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+    margin-top: -275px;
+    transform: translateX(50%);
+    font-weight: bolder;
+}
+img { /* adds border around all images */
+    border-style: solid;
+    border-width: 3px;
+    border-color: white;
+}
+.navbar img { /* removes border from ZA logo */
+    border-style: none;
+}
+.wrapper { /* edits background */
+    position: absolute;
+    width: 100%;
+    height: 170%;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(2,0,.6,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+.box div{ /* sets general data for animated white boxes */
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 20%;
+    background-color: transparent;
+    border: 6px solid rgba(255,255,255,0.8);
+}
+
+/* each box will have its own animation */
+.box div:nth-child(1) {
+    top: 12%;
+    left: 42%;
+    animation: animate 10s linear infinite;
+}
+.box div:nth-child(2) {
+    top: 70%;
+    left: 50%;
+    animation: animate 7s linear infinite;
+}
+.box div:nth-child(3) {
+    top: 17%;
+    left: 6%;
+    animation: animate 9s linear infinite;
+}
+.box div:nth-child(4) {
+    top: 20%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+}
+.box div:nth-child(5) {
+    top: 67%;
+    left: 10%;
+    animation: animate 6s linear infinite;
+}
+.box div:nth-child(6) {
+    top: 80%;
+    left: 70%;
+    animation: animate 12s linear infinite;
+}
+.box div:nth-child(7) {
+    top: 60%;
+    left: 80%;
+    animation: animate 15s linear infinite;
+}
+.box div:nth-child(8) {
+    top: 32%;
+    left: 25%;
+    animation: animate 16s linear infinite;
+}
+.box div:nth-child(9) {
+    top: 90%;
+    left: 25%;
+    animation: animate 9s linear infinite;
+}
+.box div:nth-child(10) {
+    top: 20%;
+    left: 80%;
+    animation: animate 5s linear infinite;
+}
+@keyframes animate{ /* animates white boxes to begin small, become big, then fade away */
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: scale(1.3) translateY(-280px) rotate(360deg);
+        opacity: 0;
+    }
+}
+@keyframes nav-load { /* animates navbar to dropdown */
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
