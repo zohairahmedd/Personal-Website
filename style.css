@@ -1,358 +1,265 @@
 *{ /* this will be applied to the entire website */
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    font-weight: bold;
 }
-.banner{ /* editing class banner */
-    width: 100%;
-    height: 170vh;
-    background: linear-gradient(90deg, rgba(2,0,.6,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+
+h1 { /* edit style of h1 for entire website */
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: underline;
 }
-.navbar{ /* editing class navbar (navigation bar) */
-    width: 85%;
-    margin: auto;
-    padding: 35px 0;
+
+p { /* edit style of p for entire website */
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    font-family: 'helvetica', sans-serif;
+    font-size: 20px;
+}
+
+body { /* edit background colour for entire website (ghost white) */
+    background-color: #F8F8FF;
+}
+
+footer { /* style footer for entire website */
+    background: #1D65B0;
+    position: relative;
+    bottom: 0; /* set at bottom */
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100%; /* stretch for entire screen */
+    font-family: 'helvetica', sans-serif;
+    padding-top: 20px; /* extend top */ 
+    color: #fff; /* colour of text */
+    border-top: 2px solid #C0C0C0; /* adds a slight border to the bottom of the navbar */
+}
+
+.footer-bottom {
+    margin-top: 100px; /* necessary for one.html, two.html, three.html to create space above footer so footer is always where it should be */ 
+}
+
+.footer-content { /* aligning footer items and making it responsive */
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    animation: nav-load 850ms;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
-.logo{ /* editing class logo (ZA logo in the top left) */
-    width: 120px;
-    cursor: pointer;
-    z-index: 1;
+
+.footer-content p { /* styling p for footer content */
+    margin: 5px auto;
+    font-size: 14px;
 }
-.navbar ul li{ /* (general) edits the home and project buttons in the top right in class navbar */
+
+.footer-content span { /* styling the name part of footer */
+    opacity: 0.6;
+}
+
+.navbar{ /* styling of the navigation bar */
+    width: 100%;
+    margin: auto;
+    padding: 25px 0;
+    display: flex; /* responsive */
+    align-items: center;
+    justify-content: center;
+    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
+    background-color: #1D65B0;
+    border-bottom: 2px solid #C0C0C0; /* adds a slight border to the bottom of the navbar */
+    height: 15px;
+}
+
+.header-graphic-home {
+    background-image: url('stadium.jpg');
+    background-size:cover;
+    height: 400px;
+    border-bottom: 2px solid #C0C0C0; /* adds a slight border to the bottom of the navbar */
+    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
+}
+
+.header-graphic-intro {
+    background-image: url('oldpitch.jpg');
+    background-size:cover;
+    height: 400px;
+    border-bottom: 2px solid #C0C0C0; /* adds a slight border to the bottom of the navbar */
+    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
+}
+
+.header-graphic-development {
+    background-image: url('evolution.jpg');
+    background-size:cover;
+    height: 400px; 
+    border-bottom: 2px solid #C0C0C0; /* adds a slight border to the bottom of the navbar */
+    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
+}
+
+.header-graphic-technology {
+    background-image: url('technology.jpg');
+    background-size:cover;
+    height: 400px; 
+    border-bottom: 2px solid #C0C0C0; /* adds a slight border to the bottom of the navbar */
+    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
+}
+
+.navbar ul li{ /* styles everything within ul li tags (text) */
     list-style: none;
     display: inline-block;
     margin: 0 20px;
     position: relative;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.navbar ul li a{ /* (specific) edits the home and project buttons in the top right in class navbar */
+
+.navbar ul li a{ /* styles everything within ul li a tags (text) */
     text-decoration: none;
+    font-size: 17px;
     color: #fff;
-    text-transform: uppercase;
+    font-weight: bold;
 }
+
 .navbar ul li::after{ /* once the cursor is no longer hovering or was never over some text in the navbar, this is applied */
-    content: '';
-    height: 3px;
-    width: 0;
+    content: ''; /* similar to that of width 0, removes underline */
+    height: 1px; 
+    width: 0; /* removes hovering underline on text*/
     background: #ffffff;
     position: absolute;
     left: 0;
-    bottom: -10px;
-    transition: 0.5s;
-}
-.navbar ul li:hover::after{ /* once the cursor is hovering over some text in the navbar, this overwrites the width from .navbar ul li::after */
-    width: 100%;
-}
-.content{ /* (general) edits class content */
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    text-align: center;
-    color: #fff;
-    animation: nav-load 850ms;
-}
-.content h1{ /* (specific) edits class content - headers in specific */
-    font-size: 70px;
-    margin-top: -65px;
-}
-.content p{ /* (specific) edits class content - paragraph in specific */
-    margin: 20px auto;
-    font-weight: 100;
-    line-height: 25px;
-}
-.calculatortext{ /* generalizes calculatortext data */
-    color: #fff;
-    width: 50%;
-    position: absolute;
-    top: 53%;
-    transform: translateY(1200%);
-}
-.calculatortext p{ /* positions text for calculator (x-axis) */
-    transform: translateX(23%);
-}
-.calc{ /* positions image */
-    position: absolute;
-    top: 23%;
-    transform: translateY(-100%);
-    transform: translateX(70%);
-}
-.qrcodetext{ /* generalizes qrcode data */
-    color: #fff;
-    width: 50%;
-    position: absolute;
-    top: 34%;
-    transform: translateY(1200%);
-}
-.qrcodetext p{ /* positions text for qrcode (x-axis) */
-    transform: translateX(77%);
-}
-.qr{ /* positions image */
-    position: absolute;
-    top: 23%;
-    transform: translateY(-100%);
-    transform: translateX(250%);
-    width: 300px;
-}
-.pongtext{ /* generalizes pongtext data */
-    color: #fff;
-    width: 20%;
-    position: absolute;
-    top: 43%;
-    transform: translateY(1200%);
-}
-.pongtext p{ /* positions text for pong (x-axis) */
-    transform: translateX(363.5%);
-}
-.pong{ /* positions image */
-    position: absolute;
-    top: 23%;
-    transform: translateY(-100%);
-    transform: translateX(250%);
-    width: 500px;
-}
-.unrealtext{ /* generalizes unrealtext data */
-    color: #fff;
-    width: 20%;
-    position: absolute;
-    top: 71%;
-    transform: translateY(1200%);
-    text-align: center;
-}
-.unrealtext p{ /* positions text for unreal (x-axis) */
-    transform: translateX(46%);
-}
-.unreal{ /* positions image */
-    position: absolute;
-    top: 85%;
-    transform: translateY(-100%);
-    transform: translateX(25%);
-    width: 500px;
-}
-.clocktext{ /* generalizes clocktext data */
-    color: #fff;
-    width: 20%;
-    position: absolute;
-    top: 55%;
-    transform: translateY(1200%);
-    text-align: center;
-}
-.clocktext p{ /* positions text for clocktext (x-axis) */
-    transform: translateX(195%);
-}
-.clock{ /* positions image */
-    position: absolute;
-    top: 85%;
-    transform: translateY(-100%);
-    transform: translateX(135%);
-    width: 500px;
-}
-.snake{ /* positions image */
-    position: absolute;
-    top: 85%;
-    transform: translateY(-100%);
-    transform: translateX(620%);
-    width: 200px;
-}
-.snakertext{ /* generalizes snakertest data */
-    color: #fff;
-    width: 10%;
-    position: absolute;
-    top: 27%;
-    transform: translateY(1200%);
-    text-align: center;
-}
-.snakertext p{ /* positions text for snakertext (x-axis) */
-    transform: translateX(805%);
-}
-.snaker{ /* positions image */
-    position: absolute;
-    top: 85%;
-    transform: translateY(-100%);
-    transform: translateX(740%);
-    width: 200px;
-}
-.passwordtext{ /* generalizes passwordtext data */
-    color: #fff;
-    width: 15%;
-    position: absolute;
-    top: 85%;
-    transform: translateY(1200%);
-    text-align: center;
-}
-.passwordtext p{ /* positions text for password (x-axis) */
-    transform: translateX(68%);
-}
-.password{ /* positions image */
-    position: absolute;
-    top: 138%;
-    transform: translateY(-100%);
-    transform: translateX(52%);
-    width: 330px;
-}
-.voicetext{ /* generalizes voicetext data */
-    color: #fff;
-    width: 15%;
-    position: absolute;
-    top: 86%;
-    transform: translateY(1200%);
-    text-align: center;
-}
-.voicetext p{ /* positions text for voicetext (x-axis) */
-    transform: translateX(268%);
-}
-.voice{ /* positions image */
-    position: absolute;
-    top: 138.2%;
-    transform: translateY(-100%);
-    transform: translateX(220%);
-    width: 330px;
-}
-.compressedtext{ /* generalizes compressedtext data */
-    color: #fff;
-    width: 15%;
-    position: absolute;
-    top: 94%;
-    transform: translateY(1200%);
-    text-align: center;
-}
-.compressedtext p{ /* positions text for compressedtext (x-axis) */
-    transform: translateX(456.5%);
-}
-.compressed{ /* positions image */
-    position: absolute;
-    top: 138.2%;
-    transform: translateY(-100%);
-    transform: translateX(380%);
-    width: 330px;
-}
-.projectheader { /* generalizes projectheader data */
-    color: #fff;
-    width: 15;
-    position: absolute;
-    top: 45%;
-    transform: translateY(-1200%);
-}
-.projectheader h1{ /* this will be applied to everything inside of class content <h1> in html */
-    font-size: 25px;
-    text-decoration: underline;
-    text-decoration-color: #ffffff;
-    margin-top: -275px;
-    transform: translateX(1750%);
-    font-weight: bolder;
-}
-.smallprojectheader { /* generalizes smallprojectheader data */
-    color: #fff;
-    width: 20%;
-    position: absolute;
-    top: 160%;
-    transform: translateY(-600%);
-}
-.smallprojectheader h1{ /* this will be applied to everything inside of class content <h1> in html */
-    font-size: 25px;
-    text-decoration: underline;
-    text-decoration-color: #ffffff;
-    margin-top: -275px;
-    transform: translateX(50%);
-    font-weight: bolder;
-}
-img { /* adds border around all images */
-    border-style: solid;
-    border-width: 3px;
-    border-color: white;
-}
-.navbar img { /* removes border from ZA logo */
-    border-style: none;
-}
-.wrapper { /* edits background */
-    position: absolute;
-    width: 100%;
-    height: 170%;
-    overflow: hidden;
-    background: linear-gradient(90deg, rgba(2,0,.6,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-}
-.box div{ /* sets general data for animated white boxes */
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    top: 20%;
-    background-color: transparent;
-    border: 6px solid rgba(255,255,255,0.8);
+    bottom: -10px; /* margin from underline to text */
+    transition: 0.5s; /* 0.5s for underline to disappear under text */
 }
 
-/* each box will have its own animation */
-.box div:nth-child(1) {
-    top: 12%;
-    left: 42%;
-    animation: animate 10s linear infinite;
+.navbar ul li:hover::after{ /* once the cursor is hovering over some text in the navbar, this overwrites the width from .navbar ul li::after */
+    width: 100%; /* adds hovering underline on text */
 }
-.box div:nth-child(2) {
-    top: 70%;
-    left: 50%;
-    animation: animate 7s linear infinite;
+
+figure {
+    text-align: center; /* centers text */
 }
-.box div:nth-child(3) {
-    top: 17%;
-    left: 6%;
-    animation: animate 9s linear infinite;
+
+figcaption { /* styles the captions underneath images */
+    font-family: 'helvetica', sans-serif;
+    font-size: 17px;
+    margin-top: 5px; /* adds space between text and image so that the text is not directly underneath */
 }
-.box div:nth-child(4) {
-    top: 20%;
-    left: 60%;
-    animation: animate 10s linear infinite;
+
+.content{ /* edit style of content */
+    width: 100%;
+    position: relative;
+    top: 5%; /* adds space between title and navbar */
+    text-align: center;
+    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
 }
-.box div:nth-child(5) {
-    top: 67%;
-    left: 10%;
-    animation: animate 6s linear infinite;
+
+.error-404{ /* styles error 404 page */
+    width: 100%;
+    position: relative;
+    top: 5%; /* adds space between title and navbar */
+    text-align: center;
+    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
 }
-.box div:nth-child(6) {
-    top: 80%;
-    left: 70%;
-    animation: animate 12s linear infinite;
+
+.error-404 h1 { /* styles tag h1 for error 404 page */
+    font-size: 50px;
 }
-.box div:nth-child(7) {
-    top: 60%;
-    left: 80%;
-    animation: animate 15s linear infinite;
+
+.image-404 {
+    display: block;
+    margin-left: auto; /* horizontally center elements in container */
+    margin-right: auto; /* horizontally center elements in container */
+    width: 33.33%; /* images fit across screen nicely */
+    margin: 5px auto; /* adjusting space between images */
+    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
 }
-.box div:nth-child(8) {
-    top: 32%;
-    left: 25%;
-    animation: animate 16s linear infinite;
+
+.image-404 img {
+    border-style:none;
 }
-.box div:nth-child(9) {
-    top: 90%;
-    left: 25%;
-    animation: animate 9s linear infinite;
+
+.content h1{ /* styles h1 tag for content */
+    font-size: 70px;
+    margin-bottom: 2%; /* space between h1 and p text */
 }
-.box div:nth-child(10) {
-    top: 20%;
-    left: 80%;
-    animation: animate 5s linear infinite;
+
+.content p { /* styles p tag for content */
+    margin-top: 2%; /* space between p and images */
 }
-@keyframes animate{ /* animates white boxes to begin small, become big, then fade away */
+
+img { /* adds border around all images */
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(0, 0, 0); /* black border */
+    max-width: 100%;
+    height: auto;
+}
+
+.introheader { /* styles the header title for each page */
+    width: 100%;
+    position: relative;
+    top: 5%; /* leaves gap between navbar */
+    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
+    text-align: center;
+}
+
+.main { /* edits main content for entire website (all text, images, etc - just extra spacing, centering, for better visuals) */
+    width: 100%; /* responsive */
+    position: relative;
+    top: 5%;
+    text-align: center;
+}
+
+.main h1 { /* styles h1 for tag main */
+    text-decoration: none;
+    text-align: left;
+    margin-left: 75px; /* leave space from h1 and left side of screen */
+    font-size: 28px;
+    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
+}
+
+.main p { /* styles p for tag main */
+    text-align: left;
+    margin-left: 75px; /* leave space from p and left side of screen */
+    max-width: 90%;
+    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
+}
+
+.one-two-images { /* styling for displaying one to two images side by side */
+    display: block;
+    margin-left: auto; /* horizontally center elements in container */
+    margin-right: auto; /* horizontally center elements in container */
+    width: 33.33%; /* images fit across screen nicely */
+    margin: 5px auto; /* adjusting space between images */
+    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
+}
+
+.three-images { /* styling for displaying three images */
+    float: left; /* position left side of container */
+    width: 33.33%; /* images fit across screen nicely */
+    padding: 5px; /* adjusting space between images */
+    box-sizing: border-box; /* general way to size elements properly */
+    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
+}
+
+.four-images {
+    float: left; /* position left side of container */
+    width: 25%; /* images fit across screen nicely */
+    padding: 20px; /* adjusting space between images */
+    box-sizing: border-box; /* general way to size elements properly */
+}
+
+.row-of-three-images, .row-of-two-images, .row-of-four-images::after {/* clearing the formatting for the lines afterneath - without this lines afterneath wont format correctly */
+    content: ""; 
+    display: table;
+    clear: both;
+}
+
+.row-of-two-images, .row-of-four-images {
+    display: flex; /* responsive flexbox */
+}
+
+@keyframes nav-load { /* adds animation tool that can be used for anything in websites (navload 500ms will go from a y value of -100% to 0 in 500 milliseconds) */
     0% {
-        transform: scale(0);
-        opacity: 1;
+        transform: translateY(-100%); /* at start of animation, push element upwards */
     }
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: scale(1.3) translateY(-280px) rotate(360deg);
-        opacity: 0;
-    }
-}
-@keyframes nav-load { /* animates navbar to dropdown */
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
+    100% { /* after animation, navbar moved back to original position */
         transform: translateY(0);
     }
 }
