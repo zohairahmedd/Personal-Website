@@ -103,7 +103,7 @@ body { /* edit background colour for entire website (ghost white) */
     animation: nav-load 850ms; /* animation that takes 850 milliseconds */
 }
 
-.row-of-two-images::after {/* clearing the formatting for the lines afterneath - without this lines afterneath wont format correctly */
+.row-of-two-images::after { /* clearing the formatting for the lines afterneath - without this lines afterneath wont format correctly */
     content: ""; 
     display: table;
     clear: both;
@@ -117,7 +117,7 @@ body { /* edit background colour for entire website (ghost white) */
 .one-two-images img {
     width: auto;
     height: 60%;
-    border-radius: 60%;
+    border-radius: 50%;
 }
 
 @keyframes nav-load { /* adds animation tool that can be used for anything in websites (navload 500ms will go from a y value of -100% to 0 in 500 milliseconds) */
