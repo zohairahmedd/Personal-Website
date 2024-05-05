@@ -1,27 +1,26 @@
 *{ /* this will be applied to the entire website */
     margin: 0;
     padding: 0;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
 }
 
 h1 { /* edit style of h1 for entire website */
-    font-family: "Manrope", sans-serif;
-    font-optical-sizing: auto;
-    font-size: 65px;
     font-weight: 200;
     font-style: normal;
+    color: #F8F8FF;
 }
     
 
 p { /* edit style of p for entire website */
-    font-family: "Manrope", sans-serif;
-    font-optical-sizing: auto;
-    font-size: 65px;
     font-weight: 200;
     font-style: normal;
+    color: #F8F8FF;
 }
 
 body { /* edit background colour for entire website (ghost white) */
-    background-color: #A3A3A3
+    background-color: #222222
 }
 
 .navbar{ /* styling of the navigation bar */
@@ -32,8 +31,7 @@ body { /* edit background colour for entire website (ghost white) */
     align-items: center;
     justify-content: center;
     animation: nav-load 850ms; /* animation that takes 850 milliseconds */
-    background-color: #1D65B0;
-    border-bottom: 2px solid #C0C0C0; /* adds a slight border to the bottom of the navbar */
+    background-color: transparent;
     height: 15px;
 }
 
@@ -42,13 +40,12 @@ body { /* edit background colour for entire website (ghost white) */
     display: inline-block;
     margin: 0 20px;
     position: relative;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .navbar ul li a{ /* styles everything within ul li a tags (text) */
     text-decoration: none;
     font-size: 17px;
-    color: #fff;
+    color: #F8F8FF;
     font-weight: bold;
 }
 
@@ -56,7 +53,7 @@ body { /* edit background colour for entire website (ghost white) */
     content: ''; /* similar to that of width 0, removes underline */
     height: 1px; 
     width: 0; /* removes hovering underline on text*/
-    background: #ffffff;
+    background: #F8F8FF;
     position: absolute;
     left: 0;
     bottom: -10px; /* margin from underline to text */
@@ -67,128 +64,27 @@ body { /* edit background colour for entire website (ghost white) */
     width: 100%; /* adds hovering underline on text */
 }
 
-figure {
-    text-align: center; /* centers text */
+.intro-text {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
 }
 
-figcaption { /* styles the captions underneath images */
-    font-family: 'helvetica', sans-serif;
-    font-size: 17px;
-    margin-top: 5px; /* adds space between text and image so that the text is not directly underneath */
-}
-
-.content{ /* edit style of content */
+.intro-text .content {
+    color: #fff;
+    max-width: 1200px;
     width: 100%;
-    position: relative;
-    top: 5%; /* adds space between title and navbar */
-    text-align: center;
-    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
+    margin: 0 auto;
 }
 
-.error-404{ /* styles error 404 page */
-    width: 100%;
-    position: relative;
-    top: 5%; /* adds space between title and navbar */
-    text-align: center;
-    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
+.intro-text .content h1 {
+    max-width: 600px;
 }
 
-.error-404 h1 { /* styles tag h1 for error 404 page */
-    font-size: 50px;
-}
-
-.image-404 {
-    display: block;
-    margin-left: auto; /* horizontally center elements in container */
-    margin-right: auto; /* horizontally center elements in container */
-    width: 33.33%; /* images fit across screen nicely */
-    margin: 5px auto; /* adjusting space between images */
-    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
-}
-
-.image-404 img {
-    border-style:none;
-}
-
-.content h1{ /* styles h1 tag for content */
-    font-size: 70px;
-    margin-bottom: 2%; /* space between h1 and p text */
-}
-
-.content p { /* styles p tag for content */
-    margin-top: 2%; /* space between p and images */
-}
-
-img { /* adds border around all images */
-    border-style: solid;
-    border-width: 2px;
-    border-color: rgb(0, 0, 0); /* black border */
-    max-width: 100%;
-    height: auto;
-}
-
-.introheader { /* styles the header title for each page */
-    width: 100%;
-    position: relative;
-    top: 5%; /* leaves gap between navbar */
-    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
-    text-align: center;
-}
-
-.main { /* edits main content for entire website (all text, images, etc - just extra spacing, centering, for better visuals) */
-    width: 100%; /* responsive */
-    position: relative;
-    top: 5%;
-    text-align: center;
-}
-
-.main h1 { /* styles h1 for tag main */
-    text-decoration: none;
-    text-align: left;
-    margin-left: 75px; /* leave space from h1 and left side of screen */
-    font-size: 28px;
-    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
-}
-
-.main p { /* styles p for tag main */
-    text-align: left;
-    margin-left: 75px; /* leave space from p and left side of screen */
-    max-width: 90%;
-    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
-}
-
-.one-two-images { /* styling for displaying one to two images side by side */
-    display: block;
-    margin-left: auto; /* horizontally center elements in container */
-    margin-right: auto; /* horizontally center elements in container */
-    width: 33.33%; /* images fit across screen nicely */
-    margin: 5px auto; /* adjusting space between images */
-    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
-}
-
-.three-images { /* styling for displaying three images */
-    float: left; /* position left side of container */
-    width: 33.33%; /* images fit across screen nicely */
-    padding: 5px; /* adjusting space between images */
-    box-sizing: border-box; /* general way to size elements properly */
-    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
-}
-
-.four-images {
-    float: left; /* position left side of container */
-    width: 25%; /* images fit across screen nicely */
-    padding: 20px; /* adjusting space between images */
-    box-sizing: border-box; /* general way to size elements properly */
-}
-
-.row-of-three-images, .row-of-two-images, .row-of-four-images::after {/* clearing the formatting for the lines afterneath - without this lines afterneath wont format correctly */
-    content: ""; 
-    display: table;
-    clear: both;
-}
-
-.row-of-two-images, .row-of-four-images {
-    display: flex; /* responsive flexbox */
+.intro-text .content p {
+    margin-top: 15px;
+    max-width: 600px;
 }
 
 @keyframes nav-load { /* adds animation tool that can be used for anything in websites (navload 500ms will go from a y value of -100% to 0 in 500 milliseconds) */
@@ -197,5 +93,38 @@ img { /* adds border around all images */
     }
     100% { /* after animation, navbar moved back to original position */
         transform: translateY(0);
+    }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem; /* Adjusted font size for smaller screens */
+    }
+
+    p {
+        font-size: 18px; /* Adjusted font size for smaller screens */
+    }
+}
+
+/* Media query for medium screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+    h1 {
+        font-size: 4rem; /* Adjusted font size for medium screens */
+    }
+
+    p {
+        font-size: 20px; /* Adjusted font size for medium screens */
+    }
+}
+
+/* Media query for larger screens */
+@media (min-width: 1025px) {
+    h1 {
+        font-size: 6rem; /* Original font size for larger screens */
+    }
+
+    p {
+        font-size: 25px; /* Original font size for larger screens */
     }
 }
