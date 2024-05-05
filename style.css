@@ -115,9 +115,10 @@ body { /* edit background colour for entire website (ghost white) */
 }
 
 .one-two-images img {
-    width: auto;
-    height: 60%;
-    border-radius: 50%;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 60%;
 }
 
 @keyframes nav-load { /* adds animation tool that can be used for anything in websites (navload 500ms will go from a y value of -100% to 0 in 500 milliseconds) */
