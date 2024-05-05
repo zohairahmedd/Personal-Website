@@ -4,56 +4,24 @@
 }
 
 h1 { /* edit style of h1 for entire website */
-    font-size: 35px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-decoration: underline;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 65px;
+    font-weight: 200;
+    font-style: normal;
 }
+    
 
 p { /* edit style of p for entire website */
-    margin: 20px auto;
-    font-weight: 100;
-    line-height: 25px;
-    font-family: 'helvetica', sans-serif;
-    font-size: 20px;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 65px;
+    font-weight: 200;
+    font-style: normal;
 }
 
 body { /* edit background colour for entire website (ghost white) */
-    background-color: #F8F8FF;
-}
-
-footer { /* style footer for entire website */
-    background: #1D65B0;
-    position: relative;
-    bottom: 0; /* set at bottom */
-    left: 0;
-    right: 0;
-    height: auto;
-    width: 100%; /* stretch for entire screen */
-    font-family: 'helvetica', sans-serif;
-    padding-top: 20px; /* extend top */ 
-    color: #fff; /* colour of text */
-    border-top: 2px solid #C0C0C0; /* adds a slight border to the bottom of the navbar */
-}
-
-.footer-bottom {
-    margin-top: 100px; /* necessary for one.html, two.html, three.html to create space above footer so footer is always where it should be */ 
-}
-
-.footer-content { /* aligning footer items and making it responsive */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-.footer-content p { /* styling p for footer content */
-    margin: 5px auto;
-    font-size: 14px;
-}
-
-.footer-content span { /* styling the name part of footer */
-    opacity: 0.6;
+    background-color: #A3A3A3
 }
 
 .navbar{ /* styling of the navigation bar */
@@ -67,38 +35,6 @@ footer { /* style footer for entire website */
     background-color: #1D65B0;
     border-bottom: 2px solid #C0C0C0; /* adds a slight border to the bottom of the navbar */
     height: 15px;
-}
-
-.header-graphic-home {
-    background-image: url('stadium.jpg');
-    background-size:cover;
-    height: 400px;
-    border-bottom: 2px solid #C0C0C0; /* adds a slight border to the bottom of the navbar */
-    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
-}
-
-.header-graphic-intro {
-    background-image: url('oldpitch.jpg');
-    background-size:cover;
-    height: 400px;
-    border-bottom: 2px solid #C0C0C0; /* adds a slight border to the bottom of the navbar */
-    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
-}
-
-.header-graphic-development {
-    background-image: url('evolution.jpg');
-    background-size:cover;
-    height: 400px; 
-    border-bottom: 2px solid #C0C0C0; /* adds a slight border to the bottom of the navbar */
-    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
-}
-
-.header-graphic-technology {
-    background-image: url('technology.jpg');
-    background-size:cover;
-    height: 400px; 
-    border-bottom: 2px solid #C0C0C0; /* adds a slight border to the bottom of the navbar */
-    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
 }
 
 .navbar ul li{ /* styles everything within ul li tags (text) */
