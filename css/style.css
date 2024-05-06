@@ -91,23 +91,17 @@ body {
 
 .projects-header {
     margin-top: 210px;
-    text-align: center;
+    margin-left: 50px;
 }
 
-.slider {
-    margin: 50px auto;
-    width: 20%;
-}
-
-.slider1 {
-    margin: 50px auto;
-    width: 20%;
+.slider, .slider1, .slider2 {
+    margin: 50px;
+    width: 30%;
 }
 
 .calc-text p, .pong-text p, .unreal-text p {
-    margin-top: 30px;
     font-size: 20px;
-    text-align: center;
+    margin-left: 50px;
 }
 
 .img-box {
