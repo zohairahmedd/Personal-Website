@@ -1,19 +1,19 @@
 var slider_img = document.querySelector('.slider-img')
-var images = ['calc1.png', 'calc2.png', 'calc3.png'];
+var imagesCalc = ['calc1.png', 'calc2.png', 'calc3.png'];
 var i = 0; // image index
 
-function prev() {
-    if (i <= 0) i = images.length;
+function prevCalc() {
+    if (i <= 0) i = imagesCalc.length;
     i--;
-    return setImg();
+    return setImgCalc();
 }
 
-function next() {
-    if (i >= images.length - 1) i = -1;
+function nextCalc() {
+    if (i >= imagesCalc.length - 1) i = -1;
     i++;
-    return setImg();
+    return setImgCalc();
 }
 
-function setImg() {
-    return slider_img.setAttribute('src', 'calculator/' + images[i]);
+function setImgCalc() {
+    return slider_img.setAttribute('src', 'calculator/' + imagesCalc[i]);
 }
