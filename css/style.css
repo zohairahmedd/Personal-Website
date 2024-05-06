@@ -96,11 +96,22 @@ body {
 
 .slider {
     margin: 50px auto;
-    width: 60%;
+    width: 20%;
+}
+
+.slider1 {
+    margin: 50px auto;
+    width: 20%;
+}
+
+.calc-text p, .pong-text p, .unreal-text p {
+    margin-top: 30px;
+    font-size: 20px;
+    text-align: center;
 }
 
 .img-box {
-    width: 100%;
+    width: 200%;
 }
 
 .btn {
