@@ -1,4 +1,4 @@
-*{ /* this will be applied to the entire website */
+*{ 
     margin: 0;
     padding: 0;
     font-family: "Manrope", sans-serif;
@@ -6,61 +6,61 @@
     font-weight: 200;
 }
 
-h1 { /* edit style of h1 for entire website */
+h1 { 
     font-weight: 200;
     font-style: normal;
     color: #F8F8FF;
 }
     
 
-p { /* edit style of p for entire website */
+p { 
     font-weight: 200;
     font-style: normal;
     color: #F8F8FF;
 }
 
-body { /* edit background colour for entire website (ghost white) */
+body { 
     background-color: #222222
 }
 
-.navbar{ /* styling of the navigation bar */
+.navbar{ 
     width: 100%;
     margin: auto;
     padding: 25px 0;
-    display: flex; /* responsive */
+    display: flex; 
     align-items: center;
     justify-content: center;
-    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
+    animation: nav-load 850ms;
     background-color: transparent;
     height: 15px;
 }
 
-.navbar ul li{ /* styles everything within ul li tags (text) */
+.navbar ul li{ 
     list-style: none;
     display: inline-block;
     margin: 0 20px;
     position: relative;
 }
 
-.navbar ul li a{ /* styles everything within ul li a tags (text) */
+.navbar ul li a{ 
     text-decoration: none;
     font-size: 17px;
     color: #F8F8FF;
 }
 
-.navbar ul li::after{ /* once the cursor is no longer hovering or was never over some text in the navbar, this is applied */
-    content: ''; /* similar to that of width 0, removes underline */
+.navbar ul li::after{
+    content: ''; 
     height: 1px; 
-    width: 0; /* removes hovering underline on text*/
+    width: 0; 
     background: #F8F8FF;
     position: absolute;
     left: 0;
-    bottom: -10px; /* margin from underline to text */
-    transition: 0.5s; /* 0.5s for underline to disappear under text */
+    bottom: -10px;
+    transition: 0.5s;
 }
 
-.navbar ul li:hover::after{ /* once the cursor is hovering over some text in the navbar, this overwrites the width from .navbar ul li::after */
-    width: 100%; /* adds hovering underline on text */
+.navbar ul li:hover::after{ 
+    width: 100%;
 }
 
 .intro-text {
@@ -89,6 +89,11 @@ body { /* edit background colour for entire website (ghost white) */
     color: #d3d3d3;
     font-size: 2.3rem;
     margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+.fa-github:hover,.fa-linkedin:hover,.fa-instagram:hover,.fa-envelope:hover {
+    transform: scale(1.2); 
 }
 
 .fa-linkedin, .fa-instagram, .fa-envelope {
@@ -97,19 +102,18 @@ body { /* edit background colour for entire website (ghost white) */
 
 .social-icons {
     display: flex;
-    flex-wrap: nowrap;
-    align-items: center; /* Aligns items vertically in the middle */
+    align-items: center;
 }
 
-.one-two-images { /* styling for displaying one to two images side by side */
+.one-two-images {
     display: flex;
-    justify-content: center; /* Centers the items horizontally */
-    width: 100%; /* images fit across screen nicely */
-    margin: 100px auto; /* adjusting space between images */
-    animation: nav-load 850ms; /* animation that takes 850 milliseconds */
+    justify-content: center; 
+    width: 100%; 
+    margin: 100px auto;
+    animation: nav-load 850ms; 
 }
 
-.row-of-two-images::after { /* clearing the formatting for the lines afterneath - without this lines afterneath wont format correctly */
+.row-of-two-images::after {
     content: ""; 
     display: table;
     clear: both;
@@ -117,7 +121,7 @@ body { /* edit background colour for entire website (ghost white) */
 }
 
 .row-of-two-images {
-    display: flex; /* responsive flexbox */
+    display: flex; 
 }
 
 .one-two-images img {
@@ -127,63 +131,60 @@ body { /* edit background colour for entire website (ghost white) */
     border-radius: 60%;
 }
 
-@keyframes nav-load { /* adds animation tool that can be used for anything in websites (navload 500ms will go from a y value of -100% to 0 in 500 milliseconds) */
+@keyframes nav-load { 
     0% {
-        transform: translateY(-100%); /* at start of animation, push element upwards */
+        transform: translateY(-100%); 
     }
-    100% { /* after animation, navbar moved back to original position */
+    100% { 
         transform: translateY(0);
     }
 }
 
-/* smaller screens */
 @media (max-width: 768px) {
     h1 {
-        font-size: 3rem; /* font size for smaller screens */
+        font-size: 3rem; 
     }
 
     p {
-        font-size: 1rem; /* font size for smaller screens */
+        font-size: 1rem;
     }
     
     img {
-        max-width: 100%; /* images scale down if they're larger than the container */
+        max-width: 100%; 
         height: auto; 
         object-fit: cover;
         transform: translate3d(0, 0, 1px);
     }
 }
 
-/* medium screens */
 @media (min-width: 769px) and (max-width: 1024px) {
     h1 {
-        font-size: 4rem; /* font size for medium screens */
+        font-size: 4rem; 
     }
 
     p {
-        font-size: 1.25rem; /* font size for medium screens */
+        font-size: 1.25rem; 
     }
 
     img {
-        max-width: 100%; /* images scale down if they're larger than the container */
+        max-width: 100%; 
         height: auto; 
         object-fit: cover;
         transform: translate3d(0, 0, 1px);
     }
 }
 
-/* for larger screens */
 @media (min-width: 1025px) {
     h1 {
-        font-size: 6rem; /* font size for larger screens */
+        font-size: 6rem; 
     }
 
     p {
-        font-size: 2rem; /* font size for larger screens */
+        font-size: 2rem; 
     }
 
     img {
-        max-width: 100%; /* images scale down if they're larger than the container */
+        max-width: 100%; 
         height: auto; 
         object-fit: cover;
         transform: translate3d(0, 0, 1px);
