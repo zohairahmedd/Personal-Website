@@ -3,6 +3,7 @@
     padding: 0;
     font-family: "Manrope", sans-serif;
     font-weight: 200;
+    box-sizing: border-box;
 }
 
 h1 { 
@@ -11,15 +12,14 @@ h1 {
     color: #F8F8FF;
 }
     
-
 p { 
     font-weight: 200;
     font-style: normal;
     color: #F8F8FF;
 }
 
-body { 
-    background-color: #222222
+body {
+    background-color: #222222;
 }
 
 .navbar{ 
@@ -86,7 +86,36 @@ body {
 
 .summary p {
     margin-top: 30px;
-    font-size: 15px;
+    font-size: 20px;
+}
+
+.projects-header {
+    margin-top: 210px;
+    text-align: center;
+}
+
+.slider {
+    margin: 50px auto;
+    width: 60%;
+}
+
+.img-box {
+    width: 100%;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    background: #888;
+    padding: 10px 30px;
+    font-size: 20px;
+    color: #ddd;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+.btn:hover {
+    background: #111;
 }
 
 .fa-github, .fa-linkedin, .fa-instagram, .fa-envelope {
