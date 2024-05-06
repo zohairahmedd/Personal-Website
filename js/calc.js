@@ -1,5 +1,5 @@
 var slider_img = document.querySelector('.slider-img')
-var images = ['calc1.png', 'calc2.png', 'calc3.png', 'calc4.png', 'calc5.png'];
+var images = ['calc1.png', 'calc2.png', 'calc3.png'];
 var i = 0; // image index
 
 function prev() {
