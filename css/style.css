@@ -62,6 +62,25 @@ body {
     width: 100%;
 }
 
+.name-container {
+    display: inline-block;
+}
+
+.name-container h1 {
+    border-right: 2.5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 1.5s, cursor .4s step-end infinite alternate;
+}
+
+.subheading-container p {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s, cursor .4s step-end infinite alternate;
+}
+
 .intro-text {
     height: 50vh;
     display: flex;
@@ -100,7 +119,8 @@ body {
 }
 
 .slider, .slider1, .slider2 {
-    margin: 50px;
+    margin-top: 50px;
+    margin-left: 50px;
     width: 30%;
 }
 
@@ -113,7 +133,7 @@ body {
     width: 200%;
 }
 
-.container {
+.button-container {
     display: flex;
     justify-content: space-between;
     gap: 10px; 
@@ -242,4 +262,16 @@ body {
         object-fit: cover;
         transform: translate3d(0, 0, 1px);
     }
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
 }
