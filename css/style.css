@@ -109,12 +109,43 @@ body {
     font-size: 20px;
 }
 
+.expsummary h1 {
+    font-size: 23px;
+    margin-top: 30px;
+    margin-left: 75px;
+    border-left: 1.5px solid;
+    padding-left: 10px;
+}
+
+.expsummary p {
+    font-size: 20px;
+    margin-left: 75px;
+    border-left: 1.5px solid;
+    padding-left: 10px;
+}
+
+.expsummary li {
+    color: #fff;
+    margin-left: 75px;
+    border-left: 1.5px solid;
+    padding-left: 30px;
+}
+
 .projects-header {
     margin-top: 220px;
     margin-left: 50px;
 }
 
 .projects-header p {
+    font-size: 30px;
+}
+
+.experience-header {
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+.experience-header p {
     font-size: 30px;
 }
 
@@ -262,6 +293,7 @@ body {
         object-fit: cover;
         transform: translate3d(0, 0, 1px);
     }
+}
 
 @keyframes cursor {
     50% {
@@ -273,5 +305,4 @@ body {
     from {
         width: 0;
     }
-}
 }
