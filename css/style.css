@@ -67,6 +67,7 @@ body {
     display: flex;
     align-items: center;
     padding: 0 20px;
+    margin-top: 100px;
 }
 
 .intro-text .content {
@@ -94,6 +95,10 @@ body {
     margin-left: 50px;
 }
 
+.projects-header p {
+    font-size: 30px;
+}
+
 .slider, .slider1, .slider2 {
     margin: 50px;
     width: 30%;
@@ -117,7 +122,7 @@ body {
 .btn {
     border: none;
     outline: none;
-    background: #888;
+    background: #615b59;
     padding: 10px 30px;
     font-size: 20px;
     color: #ddd;
@@ -130,7 +135,7 @@ body {
 }
 
 .btn:hover {
-    background: #111;
+    background: #2e2d2d;
 }
 
 .fa-github, .fa-linkedin, .fa-instagram, .fa-envelope {
@@ -140,7 +145,7 @@ body {
     transition: transform 0.3s ease;
 }
 
-.fa-github:hover,.fa-linkedin:hover,.fa-instagram:hover,.fa-envelope:hover {
+.fa-github:hover, .fa-linkedin:hover, .fa-instagram:hover, .fa-envelope:hover {
     transform: scale(1.2); 
 }
 
