@@ -22,6 +22,10 @@ body {
     background-color: #222222;
 }
 
+a {
+    color: #C1C1C1;
+}
+
 .navbar{ 
     width: 100%;
     margin: auto;
@@ -111,23 +115,33 @@ body {
 
 .expsummary h1 {
     font-size: 23px;
+    color: #E3E3E3;
     margin-top: 30px;
     margin-left: 75px;
     border-left: 1.5px solid;
     padding-left: 10px;
 }
 
-.expsummary p {
+.expsummary h2 {
     font-size: 20px;
+    color: #C1C1C1;
     margin-left: 75px;
-    border-left: 1.5px solid;
+    border-left: 1.5px solid #fff;
+    padding-left: 10px;
+}
+
+.expsummary p {
+    font-size: 17px;
+    color: #C1C1C1;
+    margin-left: 75px;
+    border-left: 1.5px solid #fff;
     padding-left: 10px;
 }
 
 .expsummary li {
-    color: #fff;
+    color: #C1C1C1;
     margin-left: 75px;
-    border-left: 1.5px solid;
+    border-left: 1.5px solid #fff;
     padding-left: 30px;
 }
 
@@ -136,17 +150,13 @@ body {
     margin-left: 50px;
 }
 
-.projects-header p {
+.projects-header p, .experience header p, .contact-header p {
     font-size: 30px;
 }
 
-.experience-header {
+.experience-header, .contact-header {
     margin-top: 100px;
     margin-left: 50px;
-}
-
-.experience-header p {
-    font-size: 30px;
 }
 
 .slider, .slider1, .slider2 {
@@ -217,6 +227,13 @@ body {
     animation: nav-load 850ms; 
 }
 
+.image-text {
+    display: flex;
+    justify-content: center; 
+    width: 100%; 
+    margin: 100px auto;
+}
+
 .row-of-two-images::after {
     content: ""; 
     display: table;
@@ -234,6 +251,48 @@ body {
     height: auto;
     border-radius: 60%;
 }
+
+.image-text img {
+    max-width: 400px;
+    width: 100%;
+    height: 400px;
+    border-radius: 50%;
+}
+
+.row {
+    margin-top: 30px;
+    max-width: 1170px;
+    min-height: 90vh;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    overflow-x: hidden;
+    padding: 5rem 0;
+    padding-left: 50px;
+    margin: 5px auto;
+}
+
+.row img {
+    border-radius: 50%;
+}
+
+.row .imgwrapper {
+    overflow: hidden;
+}
+
+.row .imgwrapper img {
+    width: 100%;
+}
+
+.row .contentwrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+}
+
 
 @keyframes nav-load { 
     0% {
