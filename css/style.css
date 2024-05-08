@@ -113,7 +113,7 @@ a {
 }
 
 .summary p {
-    margin-top: 30px;
+    margin-top: 18px;
     font-size: 20px;
 }
 
@@ -214,7 +214,7 @@ a {
     transform: scale(1.2); 
 }
 
-.fa-linkedin, .fa-instagram, .fa-envelope {
+.fa-linkedin, .fa-instagram, .fa-envelope, .fa-github {
     padding: 5px;
 }
 

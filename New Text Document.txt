@@ -1,2 +1,8 @@
-navbar
+
 background is a little plain, add some animation?
+
+clean up code, better naming conventions etc
+
+maybe play with font colors
+
+add captions underneath images
