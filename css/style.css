@@ -26,8 +26,12 @@ body {
     background-color: #222222;
 }
 
-a {
+.expsummary a {
     color: #C1C1C1;
+}
+
+.projects-text a {
+    color: #E3E3E3;
 }
 
 .navbar{ 
@@ -142,6 +146,21 @@ a {
     font-size: 20px;
 }
 
+.projects-text h2 {
+    font-size: 20px;
+    color: #E3E3E3;
+    margin-left: 50px;
+    border-left: 1.5px solid #fff;
+    padding-left: 10px;
+}
+
+.projects-text li {
+    color: #C1C1C1;
+    margin-left: 50px;
+    border-left: 1.5px solid #fff;
+    padding-left: 30px;
+}
+
 .expsummary h1 {
     font-size: 23px;
     color: #E3E3E3;
@@ -194,7 +213,7 @@ a {
     width: 30%;
 }
 
-.calc-text p, .pong-text p, .unreal-text p {
+.projects-text p {
     font-size: 20px;
     margin-left: 50px;
 }
