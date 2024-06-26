@@ -7,6 +7,7 @@ Developed the front end of a website using CSS, HTML, and JavaScript to display 
 - Used JavaScript to allow for scrolling through an image gallery
 - Implemented a custom scrollbar
 - Pushed all related files to Github before connecting to a personal domain using Namecheap
+- Used to display my journey as an aspiring Computer Scientist
 
 ## Screenshots
 
