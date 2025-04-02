@@ -23,7 +23,7 @@ html {
 }
   
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #666;
 }
 
 h1 { 
@@ -35,11 +35,11 @@ h1 {
 p { 
     font-weight: 200;
     font-style: normal;
-    color: #F8F8FF;
+    color: #C1C1C1;
 }
 
 body {
-    background-color: #222222;
+    background-color: #000000;
 }
 
 .expsummary a {
@@ -48,46 +48,6 @@ body {
 
 .projects-text a {
     color: #E3E3E3;
-}
-
-.navbar{ 
-    width: 100%;
-    margin: auto;
-    padding: 25px 0;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    animation: nav-load 850ms;
-    background-color: transparent;
-    height: 15px;
-}
-
-.navbar ul li{ 
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-    position: relative;
-}
-
-.navbar ul li a{ 
-    text-decoration: none;
-    font-size: 17px;
-    color: #F8F8FF;
-}
-
-.navbar ul li::after{
-    content: ''; 
-    height: 1px; 
-    width: 0; 
-    background: #F8F8FF;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    transition: 0.5s;
-}
-
-.navbar ul li:hover::after{ 
-    width: 100%;
 }
 
 .name-container {
@@ -100,6 +60,7 @@ body {
     white-space: nowrap;
     overflow: hidden;
     animation: typing 1.5s, cursor .4s step-end infinite alternate;
+    animation-delay: 0s; 
 }
 
 .subheading-container p {
@@ -107,6 +68,7 @@ body {
     white-space: nowrap;
     overflow: hidden;
     animation: typing 4s, cursor .4s step-end infinite alternate;
+    animation-delay: 0s;
 }
 
 .intro-text {
@@ -189,11 +151,11 @@ body {
     margin-left: 50px;
 }
 
-.projects-header p, .experience-header p, .contact-header p {
+.projects-header p, .experience-header p {
     font-size: 30px;
 }
 
-.experience-header, .contact-header {
+.experience-header {
     margin-top: 100px;
     margin-left: 50px;
 }
@@ -269,7 +231,6 @@ body {
     justify-content: center; 
     width: 100%; 
     margin: 100px auto;
-    animation: nav-load 850ms; 
 }
 
 .image-text {
@@ -338,16 +299,6 @@ body {
     text-align: center;
 }
 
-
-@keyframes nav-load { 
-    0% {
-        transform: translateY(-100%); 
-    }
-    100% { 
-        transform: translateY(0);
-    }
-}
-
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem; 
@@ -410,3 +361,224 @@ body {
         width: 0;
     }
 }
+
+/* Blur Reveal Animation Styles */
+.blur-reveal {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, filter 0.8s ease, transform 0.8s ease;
+    will-change: opacity, filter, transform;
+}
+
+.blur-reveal.reveal {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+.blur-reveal[data-blur="light"] {
+    filter: blur(5px);
+}
+
+.blur-reveal[data-blur="medium"] {
+    filter: blur(15px);
+}
+
+.blur-reveal[data-blur="heavy"] {
+    filter: blur(30px);
+}
+
+.blur-reveal[data-duration="fast"] {
+    transition-duration: 0.5s;
+}
+
+.blur-reveal[data-duration="normal"] {
+    transition-duration: 0.8s;
+}
+
+.blur-reveal[data-duration="slow"] {
+    transition-duration: 1.2s;
+}
+
+.blur-reveal-group {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.blur-reveal-group.reveal {
+    opacity: 1;
+}
+
+.blur-reveal-group .stagger-item {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, filter 0.8s ease, transform 0.8s ease;
+    will-change: opacity, filter, transform;
+}
+
+.blur-reveal-group.reveal .stagger-item {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+.intro-text.blur-reveal {
+    opacity: 1; /* start visible */
+    transition-delay: 0.5s; /* add a slight delay to let the page load */
+  }
+  
+  .one-two-images.blur-reveal {
+    opacity: 1; /* start visible */
+    transition-delay: 0.7s; /* add a slight delay to let the page load */
+  }
+  
+  /* ensure the typing animation works with the blur effect */
+  .blur-reveal .name-container h1,
+  .blur-reveal .subheading-container p {
+    opacity: 1;
+    filter: blur(0);
+  }
+  
+  /* Adjust the timing for the intro section */
+  .intro-text.blur-reveal,
+  .one-two-images.blur-reveal {
+    transition-duration: 1.2s;
+  }
+  
+  /* ensure all blur-reveal elements start with the correct initial state */
+  .blur-reveal {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, filter 0.8s ease, transform 0.8s ease;
+    will-change: opacity, filter, transform;
+  }
+  
+  .blur-reveal.reveal {
+    opacity: 1 !important;
+    filter: blur(0) !important;
+    transform: translateY(0) !important;
+  }
+  
+  /* special handling for intro section */
+  .intro-text.blur-reveal,
+  .one-two-images.blur-reveal {
+    transition-duration: 1s;
+  }
+  
+  /* special handling for headers */
+  .projects-header.blur-reveal,
+  .experience-header.blur-reveal {
+    transition-duration: 0.7s;
+  }
+  
+  /* ensure the typing animation works with the blur effect */
+  .blur-reveal .name-container h1,
+  .blur-reveal .subheading-container p {
+    opacity: 1;
+  }
+  
+  .blur-reveal-group .stagger-item {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, filter 0.8s ease, transform 0.8s ease;
+  }
+  
+  .blur-reveal-group.reveal .stagger-item {
+    opacity: 1 !important;
+    filter: blur(0) !important;
+    transform: translateY(0) !important;
+  }
+
+/* reset the intro section animations to be consistent with the rest of the site */
+.intro-text.blur-reveal,
+.one-two-images.blur-reveal {
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, filter 0.8s ease, transform 0.8s ease;
+  transition-delay: 0s; /* Remove any delay */
+  will-change: opacity, filter, transform;
+}
+
+/* when revealed, make it clear */
+.intro-text.blur-reveal.reveal,
+.one-two-images.blur-reveal.reveal {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+/* special handling for the typing animation */
+.name-container h1 {
+  /* keep the typing animation but make it work with blur effect */
+  animation: typing 1.5s, cursor .4s step-end infinite alternate;
+  animation-delay: 0.8s; /* Start typing after the blur clears */
+}
+
+.subheading-container p {
+  /* keep the typing animation but make it work with blur effect */
+  animation: typing 4s, cursor .4s step-end infinite alternate;
+  animation-delay: 2.3s; /* Start typing after the name typing finishes */
+}
+
+/* reset the intro section animations to be consistent with the rest of the site */
+.intro-text.blur-reveal,
+.one-two-images.blur-reveal {
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, filter 0.8s ease, transform 0.8s ease;
+  transition-delay: 0s; /* Remove any delay */
+  will-change: opacity, filter, transform;
+}
+
+/* when revealed, make it clear */
+.intro-text.blur-reveal.reveal,
+.one-two-images.blur-reveal.reveal {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+/* special handling for the typing animation - remove delays */
+.name-container h1 {
+  /* keep the typing animation but start it immediately */
+  animation: typing 1.5s, cursor .4s step-end infinite alternate;
+  animation-delay: 0s; /* Start typing immediately */
+}
+
+.subheading-container p {
+  /* keep the typing animation but start it immediately */
+  animation: typing 4s, cursor .4s step-end infinite alternate;
+  animation-delay: 0s; /* Start typing immediately */
+}
+
+/* make sure the typing animation is visible during the blur transition */
+.blur-reveal .name-container h1,
+.blur-reveal .subheading-container p {
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* ensure the typing animation restarts when scrolling back */
+.blur-reveal:not(.reveal) .name-container h1,
+.blur-reveal:not(.reveal) .subheading-container p {
+  animation: none;
+}
+
+.blur-reveal.reveal .name-container h1 {
+  animation: typing 1.5s, cursor .4s step-end infinite alternate;
+}
+
+.blur-reveal.reveal .subheading-container p {
+  animation: typing 4s, cursor .4s step-end infinite alternate;
+}
+
+
+
+
+  
