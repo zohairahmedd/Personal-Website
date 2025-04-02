@@ -6,9 +6,9 @@
         <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
         <link rel="manifest" href="images/site.webmanifest">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <meta name=”author” content="Zohair Ahmed"> 
-        <meta name=”description” content="Zohair Ahmed's personal website"> 
-        <meta name=”keywords” content="Personal Site, Personal Website, Zohair, Zohair Ahmed, Ahmed">
+        <meta name="author" content="Zohair Ahmed"> 
+        <meta name="description" content="Zohair Ahmed's personal website"> 
+        <meta name="keywords" content="Personal Site, Personal Website, Zohair, Zohair Ahmed, Ahmed">
         <link rel="stylesheet" href="css/style.css"> 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,204 +17,207 @@
     </head>
 
     <body>
-
-        <div class="navbar"> 
-            <ul> 
-                <li><a href="#Projects">Projects</a></li> 
-                <li><a href="#Experience">Experience</a></li>
-                <li><a href="#Contact">Contact</a></li>
-            </ul>
-        </div> 
         
         <div class="row-of-two-images">
             <div class="one-two-images">
-                <section class = "intro-text">
-                    <div class = "content"> 
-                        <div class = "name-container">
+                <section class="intro-text blur-reveal" data-blur="medium" data-duration="slow" data-once="true">
+                    <div class="content"> 
+                        <div class="name-container" data-stagger-delay="0.15">
                             <h1>I'm Zohair</h1>
                         </div>
-                        <div class = "subheading-container">
+                        <div class="subheading-container">
                             <p>A Student Developer </p>
                         </div>
                         <p>
-                            <div class = "social-icons">
+                            <div class="social-icons">
                                 <a href="https://github.com/zohairahmedd"><i class="fa-brands fa-github"></i></a>
                                 <a href="https://www.linkedin.com/in/zohair-ahmedd/"><i class="fa-brands fa-linkedin"></i></a>
-                                <a href="mailto:zohairahmez@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+                                <a href="/cdn-cgi/l/email-protection#72081d1a131b00131a1f170832151f131b1e5c111d1f"><i class="fa-regular fa-envelope"></i></a>
                                 <a href="https://www.instagram.com/zohair_ahmedd/"><i class="fa-brands fa-instagram"></i></a>
                             </div>
                         </p>
-                        <div class = "summary">
+                        <div class="summary">
                             <p>
-                                As an ambitious Computer Scientist studying at the University of Guelph, I'm eager to expand on my skills and abilities.
-                            </p>
-                            <p>
-                                I like to work on personal projects and expand my knowledge of other languages and libraries during my free time.
+                                An ambitious Computer Scientist studying at the University of Guelph.
                             </p>
                         </div>
                     </div>
                 </section>
             </div>
 
-            <div class="one-two-images">
-                <img src = "images/closephoto.png">
+            <div class="one-two-images blur-reveal" data-blur="heavy" data-duration="slow" data-once="true">
+                <img src="images/closephoto.png">
             </div>
         </div>
 
-        <div class = "projects-header" id = "Projects">
+        <div class="projects-header blur-reveal" id="Projects" data-blur="medium">
             <p>Projects</p>
         </div>
 
-        <div class = "slider">
-            <div class = "img-box">
-                <a href="https://github.com/zohairahmedd/Calculator"><img src = "calculator/calc1.png" class = "slider-img"></a>
+        <div class="blur-reveal-group" data-stagger-delay="0.15">
+            <div class="slider stagger-item">
+                <div class="img-box">
+                    <a href="https://github.com/zohairahmedd/Calculator"><img src="calculator/calc1.png" class="slider-img"></a>
+                </div>
+
+                <div class="button-container">
+                    <button class="btn" onclick="prevCalc()">Previous</button>
+                    <button class="btn" onclick="nextCalc()">Next</button>
+                </div>
+
+                <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/calc.js"></script>
             </div>
 
-            <div class = "button-container">
-                <button class = "btn" onclick ="prevCalc()">Previous</button>
-                <button class = "btn" onclick ="nextCalc()">Next</button>
-            </div>
-
-            <script src = "js/calc.js"></script>
-        </div>
-
-        <div class = "projects-text">
-            <h2>View on <a href = "https://github.com/zohairahmedd/Calculator">Github</a></h2>
+            <div class="projects-text stagger-item">
+                <h2>View on <a href="https://github.com/zohairahmedd/Calculator">Github</a></h2>
                 <li>Developed a calculator application using Python and the Tk GUI toolkit</li> 
                 <li>Utilized functions to create unique functionality for each desired button</li> 
                 <li>Implemented basic arithmetic operations such as addition, subtraction, multiplication, and division</li> 
                 <li>Employed a graphical user interface (GUI) library such as Tkinter for developing the user interface</li> 
+            </div>
         </div>
 
-        <div class = "slider">
-            <div class = "img-box">
-                <a href="https://github.com/zohairahmedd/Pong"><img src = "pong/pong1.png" class = "slider1-img"></a>
+        <div class="blur-reveal-group" data-stagger-delay="0.15">
+            <div class="slider stagger-item">
+                <div class="img-box">
+                    <a href="https://github.com/zohairahmedd/Pong"><img src="pong/pong1.png" class="slider1-img"></a>
+                </div>
+
+                <div class="button-container">
+                    <button class="btn" onclick="prevPong()">Previous</button>
+                    <button class="btn" onclick="nextPong()">Next</button>
+                </div>
+
+                <script src="js/pong.js"></script>
             </div>
 
-            <div class = "button-container">
-                <button class = "btn" onclick ="prevPong()">Previous</button>
-                <button class = "btn" onclick ="nextPong()">Next</button>
-            </div>
-
-            <script src = "js/pong.js"></script>
-        </div>
-
-        <div class = "projects-text">
-            <h2>View on <a href = "https://github.com/zohairahmedd/Pong">Github</a></h2>
+            <div class="projects-text stagger-item">
+                <h2>View on <a href="https://github.com/zohairahmedd/Pong">Github</a></h2>
                 <li>Developed a classic Pong application using Python with the libraries turtle and winsound</li> 
                 <li>Generated player controls for user interaction such as paddle movement</li> 
                 <li>Designed ball physics to replicate logic from past Pong games</li> 
                 <li>Included scoring system for each player, as well as sound when the ball interacts with an object</li> 
+            </div>
         </div>
 
-        <div class = "slider">
-            <div class = "img-box">
-                <a href="https://github.com/zohairahmedd/Clock"><img src = "clock/clock1.png" class = "slider5-img"></a>
+        <div class="blur-reveal-group" data-stagger-delay="0.15">
+            <div class="slider stagger-item">
+                <div class="img-box">
+                    <a href="https://github.com/zohairahmedd/Clock"><img src="clock/clock1.png" class="slider5-img"></a>
+                </div>
+
+                <div class="button-container">
+                    <button class="btn" onclick="prevClock()">Previous</button>
+                    <button class="btn" onclick="nextClock()">Next</button>
+                </div>
+
+                <script src="js/clock.js"></script>
             </div>
 
-            <div class = "button-container">
-                <button class = "btn" onclick ="prevClock()">Previous</button>
-                <button class = "btn" onclick ="nextClock()">Next</button>
-            </div>
-
-            <script src = "js/clock.js"></script>
-        </div>
-
-        <div class = "projects-text">
-            <h2>View on <a href = "https://github.com/zohairahmedd/Clock">Github</a></h2>
+            <div class="projects-text stagger-item">
+                <h2>View on <a href="https://github.com/zohairahmedd/Clock">Github</a></h2>
                 <li>Developed an application that can display both 12 or 24-hour clocks using the local time</li> 
                 <li>Takes standard C code tied with the time.h functions to effectively display a live clock</li> 
                 <li>Allows the user to choose between which time format they prefer</li> 
+            </div>
         </div>
 
-        <div class = "slider">
-            <div class = "img-box">
-                <a href="https://github.com/zohairahmedd/Snake-Game"><img src = "snake/snake1.png" class = "slider6-img"></a>
+        <div class="blur-reveal-group" data-stagger-delay="0.15">
+            <div class="slider stagger-item">
+                <div class="img-box">
+                    <a href="https://github.com/zohairahmedd/Snake-Game"><img src="snake/snake1.png" class="slider6-img"></a>
+                </div>
+
+                <div class="button-container">
+                    <button class="btn" onclick="prevSnake()">Previous</button>
+                    <button class="btn" onclick="nextSnake()">Next</button>
+                </div>
+
+                <script src="js/snake.js"></script>
             </div>
 
-            <div class = "button-container">
-                <button class = "btn" onclick ="prevSnake()">Previous</button>
-                <button class = "btn" onclick ="nextSnake()">Next</button>
-            </div>
-
-            <script src = "js/snake.js"></script>
-        </div>
-
-        <div class = "projects-text">
-            <h2>View on <a href = "https://github.com/zohairahmedd/Snake-Game">Github</a></h2>
+            <div class="projects-text stagger-item">
+                <h2>View on <a href="https://github.com/zohairahmedd/Snake-Game">Github</a></h2>
                 <li>Developed a snake game using C that continuously updates the terminal displaying the snake and the borders that contain it</li> 
                 <li>Includes a controllable snake that will end the game once it interacts with the border/itself</li> 
                 <li>Includes live score that will update on each apple eaten as well as a final score once the game ends</li> 
+            </div>
         </div>
 
-        <div class = "slider">
-            <div class = "img-box">
-                <a href="https://github.com/zohairahmedd/Unreal-Parkour-Game"><img src = "unreal/unreal1.png" class = "slider2-img"></a>
+        <div class="blur-reveal-group" data-stagger-delay="0.15">
+            <div class="slider stagger-item">
+                <div class="img-box">
+                    <a href="https://github.com/zohairahmedd/Unreal-Parkour-Game"><img src="unreal/unreal1.png" class="slider2-img"></a>
+                </div>
+
+                <div class="button-container">
+                    <button class="btn" onclick="prevUnreal()">Previous</button>
+                    <button class="btn" onclick="nextUnreal()">Next</button>
+                </div>
+                <script src="js/unreal.js"></script>
             </div>
 
-            <div class = "button-container">
-                <button class = "btn" onclick ="prevUnreal()">Previous</button>
-                <button class = "btn" onclick ="nextUnreal()">Next</button>
-            </div>
-            <script src = "js/unreal.js"></script>
-        </div>
-
-        <div class = "projects-text">
-            <h2>View on <a href = "https://github.com/zohairahmedd/Unreal-Parkour-Game">Github</a></h2>
-                <li>Developed a 2D dynamic parkour video game based on ”Getting Over It” using Unreal Engine’s Blueprint
+            <div class="projects-text stagger-item">
+                <h2>View on <a href="https://github.com/zohairahmedd/Unreal-Parkour-Game">Github</a></h2>
+                <li>Developed a 2D dynamic parkour video game based on "Getting Over It" using Unreal Engine's Blueprint
                     Visual Scripting</li> 
                 <li>Applied assets into game files to create appealing visuals</li> 
                 <li>Created 2D sprites which rendered into the game as obstacles/surfaces</li> 
                 <li>Coded a movement system that allows users to attempt to navigate through the obstacles</li> 
+            </div>
         </div>
 
-        <div class = "slider">
-            <div class = "img-box">
-                <a href="https://github.com/zohairahmedd/d2-prediction-masks"><img src = "d2-prediction-masks/d2-prediction-masks1.png" class = "slider3-img"></a>
+        <div class="blur-reveal-group" data-stagger-delay="0.15">
+            <div class="slider stagger-item">
+                <div class="img-box">
+                    <a href="https://github.com/zohairahmedd/d2-prediction-masks"><img src="d2-prediction-masks/d2-prediction-masks1.png" class="slider3-img"></a>
+                </div>
+
+                <div class="button-container">
+                    <button class="btn" onclick="prevPrediction()">Previous</button>
+                    <button class="btn" onclick="nextPrediction()">Next</button>
+                </div>
+
+                <script src="js/d2-prediction-masks.js"></script>
             </div>
 
-            <div class = "button-container">
-                <button class = "btn" onclick ="prevPrediction()">Previous</button>
-                <button class = "btn" onclick ="nextPrediction()">Next</button>
-            </div>
-
-            <script src = "js/d2-prediction-masks.js"></script>
-        </div>
-
-        <div class = "projects-text">
-            <h2>View on <a href = "https://github.com/zohairahmedd/d2-prediction-masks">Github</a></h2>
+            <div class="projects-text stagger-item">
+                <h2>View on <a href="https://github.com/zohairahmedd/d2-prediction-masks">Github</a></h2>
                 <li>Developed an automated image annotation tool using Python & Detectron2</li> 
                 <li>Utilized pre-trained Mask R-CNN model for accurate object detection and segmentation</li> 
                 <li>Calculates and reports mask areas for detected objects</li> 
                 <li>Saves annotated images to specified output directories</li> 
+            </div>
         </div>
 
-        <div class = "slider">
-            <div class = "img-box">
-                <a href="https://github.com/zohairahmedd/Full-Stack-Spring-Boot-Web-App"><img src = "fullstack/fullstack.png" class = "slider7-img"></a>
+        <div class="blur-reveal-group" data-stagger-delay="0.15">
+            <div class="slider stagger-item">
+                <div class="img-box">
+                    <a href="https://github.com/zohairahmedd/Full-Stack-Spring-Boot-Web-App"><img src="fullstack/fullstack.png" class="slider7-img"></a>
+                </div>
+
+                <div class="button-container">
+                    <button class="btn" onclick="prevFullStack()">Previous</button>
+                    <button class="btn" onclick="nextFullStack()">Next</button>
+                </div>
+
+                <script src="js/fullstack.js"></script>
             </div>
 
-            <div class = "button-container">
-                <button class = "btn" onclick ="prevFullStack()">Previous</button>
-                <button class = "btn" onclick ="nextFullStack()">Next</button>
-            </div>
-
-            <script src = "js/fullstack.js"></script>
-        </div>
-
-        <div class = "projects-text">
-            <h2>View on <a href = "https://github.com/zohairahmedd/Web-Application">Github</a></h2>
+            <div class="projects-text stagger-item">
+                <h2>View on <a href="https://github.com/zohairahmedd/Web-Application">Github</a></h2>
                 <li>Developed a full-stack web application using Spring Boot for backend services and React for responsive frontend UI</li> 
                 <li>Utilized Node.js and React for communication between the frontend and backend</li> 
                 <li>Integrated AWS S3 for cloud-based storage of user-generated content</li> 
                 <li>Leveraged Docker for containerization, enabling seamless deployment and consistent environment replication</li> 
+            </div>
         </div>
 
-        <div class = "experience-header" id = "Experience">
+        <div class="experience-header blur-reveal" id="Experience" data-blur="medium">
             <p>Experience</p>
         </div>
 
-        <div class = "expsummary">
+        <div class="expsummary blur-reveal" data-blur="medium" data-duration="normal">
             <h1>Undergrad Research Assistant</h1>
             <h2>University of Guelph</a></h2>
             <p>May 2024 -- December 2024</p>
@@ -227,47 +230,30 @@
                 <li>Project shown below!</li> 
         </div>
 
-        <div class = "slider">
-            <div class = "img-box">
-                <a><img src = "URA_Final_Project/URA_Final_Project.png" class = "slider4-img"></a>
+        <div class="blur-reveal-group" data-stagger-delay="0.15">
+            <div class="slider stagger-item">
+                <div class="img-box">
+                    <a><img src="URA_Final_Project/URA_Final_Project.png" class="slider4-img"></a>
+                </div>
+
+                <div class="button-container">
+                    <button class="btn" onclick="prevFinalUra()">Previous</button>
+                    <button class="btn" onclick="nextFinalUra()">Next</button>
+                </div>
+
+                <script src="js/URA_Final.js"></script>
             </div>
 
-            <div class = "button-container">
-                <button class = "btn" onclick ="prevFinalUra()">Previous</button>
-                <button class = "btn" onclick ="nextFinalUra()">Next</button>
-            </div>
-
-            <script src = "js/URA_Final.js"></script>
-        </div>
-
-        <div class = "projects-text">
+            <div class="projects-text stagger-item">
                 <li>Developed a Python script using Detectron2 for object detection and segmentation of a horse's eye-related features. </li> 
                 <li>Videos are automatically segmented into individual frames for seamless annotation</li> 
                 <li>Created and implemented a custom-trained model specifically designed for accurate detection of a horses unique eye features</li> 
                 <li>Implemented a CSV logging system to track detection results across multiple images</li> 
-        </div>
-        
-        <div class = "contact-header" id = "Contact">
-            <p>Contact</p>
-        </div>
-
-        <div class = "row">
-            <div class = "imgwrapper">
-                <img src = "images/farphoto.jpg">
-            </div>
-            <div class="contentwrapper">
-                <div class="content2">
-                    <p>Zohair Ahmed</p>
-                        <div class = "social-icons2">
-                            <a href="https://github.com/zohairahmedd"><i class="fa-brands fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/zohair-ahmedd/"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="mailto:zohairahmez@gmail.com"><i class="fa-regular fa-envelope"></i></a>
-                            <a href="https://www.instagram.com/zohair_ahmedd/"><i class="fa-brands fa-instagram"></i></a>
-                        </div>
-                </div>
             </div>
         </div>
 
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="js/blur-reveal.js"></script>
     </body>
 
 </html>
