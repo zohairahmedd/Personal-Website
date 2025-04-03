@@ -1,4 +1,4 @@
-*{ 
+* { 
     margin: 0;
     padding: 0;
     font-family: "Manrope", sans-serif;
@@ -286,154 +286,154 @@ body {
 .intro-text.blur-reveal {
     opacity: 1; /* start visible */
     transition-delay: 0.5s; /* add a slight delay to let the page load */
-  }
+}
   
-  .one-two-images.blur-reveal {
+.one-two-images.blur-reveal {
     opacity: 1; /* start visible */
     transition-delay: 0.7s; /* add a slight delay to let the page load */
-  }
+}
   
-  /* ensure the typing animation works with the blur effect */
-  .blur-reveal .name-container h1,
-  .blur-reveal .subheading-container p {
+/* ensure the typing animation works with the blur effect */
+.blur-reveal .name-container h1,
+.blur-reveal .subheading-container p {
     opacity: 1;
     filter: blur(0);
-  }
+}
   
-  /* Adjust the timing for the intro section */
-  .intro-text.blur-reveal,
-  .one-two-images.blur-reveal {
+/* Adjust the timing for the intro section */
+.intro-text.blur-reveal,
+.one-two-images.blur-reveal {
     transition-duration: 1.2s;
-  }
+}
   
-  /* ensure all blur-reveal elements start with the correct initial state */
-  .blur-reveal {
+/* ensure all blur-reveal elements start with the correct initial state */
+.blur-reveal {
     opacity: 0;
     filter: blur(15px);
     transform: translateY(30px);
     transition: opacity 0.8s ease, filter 0.8s ease, transform 0.8s ease;
     will-change: opacity, filter, transform;
-  }
+}
   
-  .blur-reveal.reveal {
+.blur-reveal.reveal {
     opacity: 1 !important;
     filter: blur(0) !important;
     transform: translateY(0) !important;
-  }
+}
   
-  /* special handling for intro section */
-  .intro-text.blur-reveal,
-  .one-two-images.blur-reveal {
+/* special handling for intro section */
+.intro-text.blur-reveal,
+.one-two-images.blur-reveal {
     transition-duration: 1s;
-  }
+}
   
-  /* special handling for headers */
-  .projects-header.blur-reveal {
+/* special handling for headers */
+.projects-header.blur-reveal {
     transition-duration: 0.7s;
-  }
+}
   
-  /* ensure the typing animation works with the blur effect */
-  .blur-reveal .name-container h1,
-  .blur-reveal .subheading-container p {
+/* ensure the typing animation works with the blur effect */
+.blur-reveal .name-container h1,
+.blur-reveal .subheading-container p {
     opacity: 1;
-  }
+}
   
-  .blur-reveal-group .stagger-item {
+.blur-reveal-group .stagger-item {
     opacity: 0;
     filter: blur(15px);
     transform: translateY(30px);
     transition: opacity 0.8s ease, filter 0.8s ease, transform 0.8s ease;
-  }
+}
   
-  .blur-reveal-group.reveal .stagger-item {
+.blur-reveal-group.reveal .stagger-item {
     opacity: 1 !important;
     filter: blur(0) !important;
     transform: translateY(0) !important;
-  }
+}
 
 /* reset the intro section animations to be consistent with the rest of the site */
 .intro-text.blur-reveal,
 .one-two-images.blur-reveal {
-  opacity: 0;
-  filter: blur(15px);
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, filter 0.8s ease, transform 0.8s ease;
-  transition-delay: 0s; /* Remove any delay */
-  will-change: opacity, filter, transform;
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, filter 0.8s ease, transform 0.8s ease;
+    transition-delay: 0s; /* Remove any delay */
+    will-change: opacity, filter, transform;
 }
 
 /* when revealed, make it clear */
 .intro-text.blur-reveal.reveal,
 .one-two-images.blur-reveal.reveal {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateY(0);
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
 }
 
 /* special handling for the typing animation */
 .name-container h1 {
-  /* keep the typing animation but make it work with blur effect */
-  animation: typing 1.5s, cursor .4s step-end infinite alternate;
-  animation-delay: 0.8s; /* Start typing after the blur clears */
+    /* keep the typing animation but make it work with blur effect */
+    animation: typing 1.5s, cursor .4s step-end infinite alternate;
+    animation-delay: 0.8s; /* Start typing after the blur clears */
 }
 
 .subheading-container p {
-  /* keep the typing animation but make it work with blur effect */
-  animation: typing 4s, cursor .4s step-end infinite alternate;
-  animation-delay: 2.3s; /* Start typing after the name typing finishes */
+    /* keep the typing animation but make it work with blur effect */
+    animation: typing 4s, cursor .4s step-end infinite alternate;
+    animation-delay: 2.3s; /* Start typing after the name typing finishes */
 }
 
 /* reset the intro section animations to be consistent with the rest of the site */
 .intro-text.blur-reveal,
 .one-two-images.blur-reveal {
-  opacity: 0;
-  filter: blur(15px);
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, filter 0.8s ease, transform 0.8s ease;
-  transition-delay: 0s; /* Remove any delay */
-  will-change: opacity, filter, transform;
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, filter 0.8s ease, transform 0.8s ease;
+    transition-delay: 0s; /* Remove any delay */
+    will-change: opacity, filter, transform;
 }
 
 /* when revealed, make it clear */
 .intro-text.blur-reveal.reveal,
 .one-two-images.blur-reveal.reveal {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateY(0);
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
 }
 
 /* special handling for the typing animation - remove delays */
 .name-container h1 {
-  /* keep the typing animation but start it immediately */
-  animation: typing 1.5s, cursor .4s step-end infinite alternate;
-  animation-delay: 0s; /* Start typing immediately */
+    /* keep the typing animation but start it immediately */
+    animation: typing 1.5s, cursor .4s step-end infinite alternate;
+    animation-delay: 0s; /* Start typing immediately */
 }
 
 .subheading-container p {
-  /* keep the typing animation but start it immediately */
-  animation: typing 4s, cursor .4s step-end infinite alternate;
-  animation-delay: 0s; /* Start typing immediately */
+    /* keep the typing animation but start it immediately */
+    animation: typing 4s, cursor .4s step-end infinite alternate;
+    animation-delay: 0s; /* Start typing immediately */
 }
 
 /* make sure the typing animation is visible during the blur transition */
 .blur-reveal .name-container h1,
 .blur-reveal .subheading-container p {
-  opacity: 1;
-  filter: blur(0);
+    opacity: 1;
+    filter: blur(0);
 }
 
 /* ensure the typing animation restarts when scrolling back */
 .blur-reveal:not(.reveal) .name-container h1,
 .blur-reveal:not(.reveal) .subheading-container p {
-  animation: none;
+    animation: none;
 }
 
 .blur-reveal.reveal .name-container h1 {
-  animation: typing 1.5s, cursor .4s step-end infinite alternate;
+    animation: typing 1.5s, cursor .4s step-end infinite alternate;
 }
 
 .blur-reveal.reveal .subheading-container p {
-  animation: typing 4s, cursor .4s step-end infinite alternate;
+    animation: typing 4s, cursor .4s step-end infinite alternate;
 }
 
 .projects-grid-container {
@@ -441,27 +441,27 @@ body {
     max-width: 1200px;
     margin: 50px auto;
     padding: 0 20px;
-  }
+}
   
-  .projects-grid {
+.projects-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 30px;
-  }
+}
   
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
     .projects-grid {
-      grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
-  }
+}
   
-  @media (min-width: 1024px) {
+@media (min-width: 1024px) {
     .projects-grid {
-      grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
-  }
+}
   
-  .project-card {
+.project-card {
     border-radius: 8px;
     overflow: hidden;
     background-color: #111111;
@@ -470,57 +470,57 @@ body {
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #333;
-  }
+}
   
-  .project-card:hover {
+.project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  }
+}
   
-  .project-image {
+.project-image {
     position: relative;
     aspect-ratio: 16 / 9;
     overflow: hidden;
-  }
+}
   
-  .project-image img {
+.project-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
-  }
+}
   
-  .project-card:hover .project-image img {
+.project-card:hover .project-image img {
     transform: scale(1.05);
-  }
+}
   
-  .project-content {
+.project-content {
     padding: 20px;
     flex-grow: 1;
-  }
+}
   
-  .project-title {
+.project-title {
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 10px;
     color: #f8f8ff;
-  }
+}
   
-  .project-description {
+.project-description {
     font-size: 14px;
     color: #c1c1c1;
     margin-bottom: 15px;
     line-height: 1.5;
-  }
+}
   
-  .project-tags {
+.project-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 10px;
-  }
+}
   
-  .project-tag {
+.project-tag {
     display: inline-flex;
     align-items: center;
     padding: 4px 8px;
@@ -530,14 +530,14 @@ body {
     background-color: #222;
     color: #c1c1c1;
     border: 1px solid #444;
-  }
+}
   
-  .project-footer {
+.project-footer {
     padding: 15px 20px;
     border-top: 1px solid #333;
-  }
+}
   
-  .project-link {
+.project-link {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -545,24 +545,23 @@ body {
     color: #c1c1c1;
     text-decoration: none;
     transition: color 0.3s ease;
-  }
+}
   
-  .project-link:hover {
+.project-link:hover {
     color: #f8f8ff;
-  }
+}
   
-  .project-link i {
+.project-link i {
     font-size: 16px;
-  }
+}
 
-
-  .terminal-section {
+.terminal-section {
     max-width: 800px;
     margin: 10px auto;
     padding: 0 20px;
-  }
+}
   
-  .terminal-window {
+.terminal-window {
     border: 1px solid rgba(255, 255, 255, 0.2);
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 8px;
@@ -571,74 +570,74 @@ body {
     position: relative;
     font-family: "Manrope", monospace;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  }
+}
   
-  .terminal-header {
+.terminal-header {
     display: flex;
     align-items: center;
     margin-bottom: 0.2rem; 
     padding-bottom: 0.2rem; 
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
+}
   
-  .terminal-button {
+.terminal-button {
     width: 12px;
     height: 12px;
     border-radius: 50%;
     margin-right: 6px;
-  }
+}
   
-  .terminal-button-red {
+.terminal-button-red {
     background-color: #ff5f56;
-  }
+}
   
-  .terminal-button-yellow {
+.terminal-button-yellow {
     background-color: #ffbd2e;
-  }
+}
   
-  .terminal-button-green {
+.terminal-button-green {
     background-color: #27c93f;
-  }
+}
   
-  .terminal-title {
+.terminal-title {
     margin-left: 0.5rem;
     font-size: 0.8rem;
     color: rgba(255, 255, 255, 0.7);
-  }
+}
   
-  .terminal-content {
+.terminal-content {
     font-family: "Manrope", monospace;
     line-height: 1.4;
     min-height: 120px;
     white-space: pre-wrap;
     padding-top: 0; 
-  }
+}
   
-  .terminal-line {
+.terminal-line {
     display: block;
     margin-top: 0; 
     margin-bottom: 0.4rem;
-  }
+}
   
-  .terminal-line:first-child {
+.terminal-line:first-child {
     margin-top: 0;
-  }
+}
   
-  .terminal-prompt {
+.terminal-prompt {
     color: #C1C1C1;
-  }
+}
   
-  .terminal-command {
+.terminal-command {
     color: #ffffff;
-  }
+}
   
-  .terminal-response {
+.terminal-response {
     color: #8f8f8f;
     font-size: 0.9em;
     margin-bottom: 0.4rem;
-  }
+}
   
-  .terminal-cursor {
+.terminal-cursor {
     display: inline-block;
     width: 10px;
     height: 1.2em;
@@ -646,16 +645,9 @@ body {
     animation: blink 1s step-end infinite;
     vertical-align: text-bottom;
     margin-left: 2px;
-  }
+}
   
-  @keyframes blink {
+@keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
-  }
-  
-  
-
-
-
-
-  
+}
