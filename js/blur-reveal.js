@@ -1,4 +1,4 @@
-// blur Reveal Animation
+// blur reveal animation
 document.addEventListener('DOMContentLoaded', function() {
   // options for the Intersection Observer
   const options = {
