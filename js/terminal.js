@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
       3000, // longer delay after "git push" before showing response
     ]
   
-    // Custom delays before starting the next command
     const nextCommandDelays = [
       1000, // delay before starting "git commit" after "git add" response
       1500, // delay before starting "git push" after "git commit" response
