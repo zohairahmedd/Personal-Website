@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
           // show thinking animation
           const thinkingElement = document.createElement("div")
           thinkingElement.className = "terminal-thinking"
-          thinkingElement.textContent = "" // Empty at first
+          thinkingElement.textContent = "" 
           terminalContent.appendChild(thinkingElement)
   
           // "thinking" with dots appearing
