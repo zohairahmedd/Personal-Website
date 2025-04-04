@@ -60,6 +60,75 @@
                 <img src="images/closephoto.png">
             </div>
         </div>
+
+        <center> 
+            <div class="journey-header blur-reveal" id="Journey" data-blur="medium">
+                <p>Professional Journey</p>
+            </div>
+        </center>
+        
+        <div class="journey-container blur-reveal-group" data-stagger-delay="0.15">
+            <div class="journey-tabs">
+                <button class="journey-tab active stagger-item delay-100" data-tab="work">Work Experience</button>
+                <button class="journey-tab stagger-item delay-100" data-tab="education">Education</button>
+            </div>
+            
+            <div class="journey-content blur-reveal">
+                <!-- work tab (visible by default) -->
+                <div class="journey-tab-content active" id="work">
+                    <div class="timeline">
+                        
+                        <div class="timeline-item stagger-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">May 2024 - December 2024</div>
+                            <div class="timeline-content">
+                                <h3>University of Guelph</h3>
+                                <p class="timeline-title">Software Developer</p>
+                                <p class="timeline-description">Developed Python software using Detectron2 for object detection and segmentation of a horse's eye-related features.</p>
+                                <div class="timeline-skills">
+                                    <span class="timeline-skill">Python</span>
+                                    <span class="timeline-skill">Detectron2</span>
+                                    <span class="timeline-skill">PyTorch</span>
+                                    <span class="timeline-skill">Machine Learning</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- education Tab -->
+                <div class="journey-tab-content" id="education">
+                    <div class="timeline">
+                        <div class="timeline-item stagger-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2023 - Present</div>
+                            <div class="timeline-content">
+                                <h3>University of Guelph</h3>
+                                <p class="timeline-title">Bachelor of Computing, Computer Science</p>
+                                <p class="timeline-description">Studying Computer Science (Co-op) with a focus on software development.</p>
+                                <div class="timeline-details">
+                                    <p><strong>GPA:</strong> 3.5/4.0</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item stagger-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2019 - 2023</div>
+                            <div class="timeline-content">
+                                <h3>High School</h3>
+                                <p class="timeline-title">High School Diploma</p>
+                                <p class="timeline-description">Graduated with 98% cumulative average between Grade 11 & 12.</p>
+                                <div class="timeline-details">
+                                    <p><strong>Achievements:</strong> Honour Roll</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <center> 
             <div class="projects-header blur-reveal" id="Projects" data-blur="medium">
                 <p>Projects</p>
@@ -197,5 +266,6 @@
         <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
         <script src="js/blur-reveal.js"></script>
         <script src="js/terminal.js"></script>
+        <script src="js/journey-tabs.js"></script>
     </body>
 </html>
