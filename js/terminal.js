@@ -6,25 +6,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const responses = [
       "",
       "[main 5f2a33d] my website\n 9 files changed, 484 insertions(+), 24 deletions(-)",
-      "Enumerating objects: 9, done.\nCounting objects: 100% (9/9), done.\nDelta compression using up to 8 threads\nCompressing objects: 100% (5/5), done.", // First part of git push response
-      "Writing objects: 100% (5/5), 1.23 KiB | 1.23 MiB/s, done.\nTotal 5 (delta 2), reused 0 (delta 0), pack-reused 0\nremote: Resolving deltas: 100% (2/2), completed with 2 local objects.\nTo github.com:zohairahmedd/portfolio.git\n   a1b2c3d..5f2a33d  main -> main", // Second part of git push response
+      "Enumerating objects: 9, done.\nCounting objects: 100% (9/9), done.\nDelta compression using up to 8 threads\nCompressing objects: 100% (5/5), done.\nWriting objects: 100% (5/5), 1.23 KiB | 1.23 MiB/s, done.\nTotal 5 (delta 2), reused 0 (delta 0), pack-reused 0\nremote: Resolving deltas: 100% (2/2), completed with 2 local objects.\nTo github.com:zohairahmedd/portfolio.git\n   a1b2c3d..5f2a33d  main -> main", // Response for git push
     ]
-
+  
+    // custom delays for each command (in milliseconds)
     const commandDelays = [
       800, // delay after "git add ."
       1200, // delay after "git commit -m \"my website\""
       3000, // longer delay after "git push" before showing response
     ]
   
-    // custom delays before starting the next command
+    // Custom delays before starting the next command
     const nextCommandDelays = [
       1000, // delay before starting "git commit" after "git add" response
       1500, // delay before starting "git push" after "git commit" response
       0, // no command after "git push"
     ]
-  
-    // delay between parts of the git push response (in milliseconds)
-    const gitPushResponseDelay = 1200
   
     let currentCommandIndex = 0
     let currentCharIndex = 0
@@ -32,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let commandTextElement = null
     let cursorElement = null
     let isTyping = false
-    let isShowingGitPushResponse = false
   
     // function to create a new command line
     function createCommandLine() {
@@ -72,19 +68,20 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         currentLineElement.removeChild(cursorElement)
   
+        // use custom delay based on the current command
         setTimeout(showResponse, commandDelays[currentCommandIndex])
       }
     }
   
     // function to show command response
     function showResponse() {
-
-      if (currentCommandIndex === 2) {
-        if (!isShowingGitPushResponse) {
-          // show thinking animation
+      if (responses[currentCommandIndex]) {
+        // for git push response, add a "thinking" indicator first
+        if (currentCommandIndex === 2) {
+          // git push
           const thinkingElement = document.createElement("div")
           thinkingElement.className = "terminal-thinking"
-          thinkingElement.textContent = "" 
+          thinkingElement.textContent = ""
           terminalContent.appendChild(thinkingElement)
   
           // "thinking" with dots appearing
@@ -95,49 +92,40 @@ document.addEventListener("DOMContentLoaded", () => {
             terminalContent.scrollTop = terminalContent.scrollHeight
           }, 300)
   
-          // after a delay, clear the thinking indicator and show the first part of the response
+          // after a delay, clear the thinking indicator and show the actual response
           setTimeout(() => {
             clearInterval(thinkingInterval)
             terminalContent.removeChild(thinkingElement)
   
             const responseElement = document.createElement("div")
             responseElement.className = "terminal-response"
-            responseElement.textContent = responses[2] 
+            responseElement.textContent = responses[currentCommandIndex]
             terminalContent.appendChild(responseElement)
   
             terminalContent.scrollTop = terminalContent.scrollHeight
   
-            isShowingGitPushResponse = true
+            currentCommandIndex++
+            currentCharIndex = 0
   
-            setTimeout(showResponse, gitPushResponseDelay)
+            if (currentCommandIndex < commands.length) {
+              setTimeout(nextCommand, nextCommandDelays[currentCommandIndex - 1])
+            }
           }, 1500) 
         } else {
 
           const responseElement = document.createElement("div")
           responseElement.className = "terminal-response"
-          responseElement.textContent = responses[3] 
+          responseElement.textContent = responses[currentCommandIndex]
           terminalContent.appendChild(responseElement)
   
           terminalContent.scrollTop = terminalContent.scrollHeight
   
-          isShowingGitPushResponse = false
           currentCommandIndex++
           currentCharIndex = 0
   
-        }
-      } else if (responses[currentCommandIndex]) {
-        const responseElement = document.createElement("div")
-        responseElement.className = "terminal-response"
-        responseElement.textContent = responses[currentCommandIndex]
-        terminalContent.appendChild(responseElement)
-  
-        terminalContent.scrollTop = terminalContent.scrollHeight
-  
-        currentCommandIndex++
-        currentCharIndex = 0
-  
-        if (currentCommandIndex < commands.length) {
-          setTimeout(nextCommand, nextCommandDelays[currentCommandIndex - 1])
+          if (currentCommandIndex < commands.length) {
+            setTimeout(nextCommand, nextCommandDelays[currentCommandIndex - 1])
+          }
         }
       } else {
         currentCommandIndex++
