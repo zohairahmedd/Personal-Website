@@ -61,6 +61,7 @@ body {
     overflow: hidden;
     animation: typing 1.5s, cursor .4s step-end infinite alternate;
     animation-delay: 0s; 
+    font-size: 4.5rem !important;
 }
 
 .subheading-container p {
@@ -69,6 +70,7 @@ body {
     overflow: hidden;
     animation: typing 4s, cursor .4s step-end infinite alternate;
     animation-delay: 0s;
+    font-size: 2rem !important;
 }
 
 .intro-text {
@@ -95,8 +97,8 @@ body {
 }
 
 .summary p {
-    margin-top: 18px;
-    font-size: 20px;
+    margin-top: 15px;
+    font-size: 1rem !important;
 }
 
 .projects-header {
@@ -221,7 +223,6 @@ body {
     }
 }
 
-/* Blur Reveal Animation Styles */
 .blur-reveal {
     opacity: 0;
     filter: blur(15px);
