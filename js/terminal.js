@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const responses = [
       "",
       "[main 5f2a33d] my website\n 9 files changed, 484 insertions(+), 24 deletions(-)",
-      "Enumerating objects: 9, done.\nCounting objects: 100% (9/9), done.\nDelta compression using up to 8 threads\nCompressing objects: 100% (5/5), done.\nWriting objects: 100% (5/5), 1.23 KiB | 1.23 MiB/s, done.\nTotal 5 (delta 2), reused 0 (delta 0), pack-reused 0\nremote: Resolving deltas: 100% (2/2), completed with 2 local objects.\nTo github.com:zohairahmedd/portfolio.git\n   a1b2c3d..5f2a33d  main -> main", // Response for git push
+      "Enumerating objects: 9, done.\nCounting objects: 100% (9/9), done.\nDelta compression using up to 8 threads\nCompressing objects: 100% (5/5), done.\nWriting objects: 100% (5/5), 1.23 KiB | 1.23 MiB/s, done.\nTotal 5 (delta 2), reused 0 (delta 0), pack-reused 0\nremote: Resolving deltas: 100% (2/2).\nTo github.com:zohairahmedd/portfolio.git\n   a1b2c3d..5f2a33d  main -> main",
     ]
   
     // custom delays for each command (in milliseconds)
