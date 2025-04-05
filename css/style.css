@@ -97,8 +97,8 @@ body {
 }
 
 .summary p {
-    margin-top: 15px;
-    font-size: 1rem !important;
+    margin-top: 10px;
+    font-size: 1.25rem !important;
 }
 
 .projects-header {
@@ -127,12 +127,6 @@ body {
 .social-icons {
     display: flex;
     align-items: center;
-}
-
-.social-icons2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .one-two-images {
